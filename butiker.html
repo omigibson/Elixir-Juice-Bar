@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <title>Elixir Juice Bar</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Vidaloka" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+
+
+</head>
+
+<body>
+    <header role="banner">
+        <div class="logo"><img src="Images/elexir_color.png" alt="Elixir Juice Bar logo"></div>
+
+        <div class="headerbild"></div>
+
+        <nav role="navigation">
+            <ul class="list-inline">
+                <li><a href="index.html">HEM</a></li>
+                <li><a href="juice.html">VÅRA JUICER</a></li>
+                <li><a href="om.html">OM ELIXIR</a></li>
+                <li><a href="butiker.html" class="current" aria-current="page">BUTIKER</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main class="container" role="main">
+        <div class="row">
+            <section>
+                <h2>Butiker</h2>
+
+
+                <p>Du kan nå oss via telefon och email, eller använda formuläret längre ned på sidan för att skicka ett meddelande.</p>
+                <p><strong>Telefonnummer</strong> (växel): 08-000 XX XX </p>
+                <p><strong>Email:</strong> exempel@elixirjuicebar.se</p>
+                <p><strong>Öppettider:</strong> Mån-fre 10-20, lördagar 10-18, söndagar 11-17</p>
+            </section>
+
+            <section class="col-sm-6 col-lg-5 col-lg-offset-1">
+                <h3>Stockholm</h3>
+                <p><strong>Adress:</strong> Karlbergsvägen 63.</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.450560509074!2d18.0299517156857!3d59.34212651703904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d79cab5c227%3A0x3fd62e077b856c85!2sKarlbergsv%C3%A4gen+63%2C+113+35+Stockholm!5e0!3m2!1ssv!2sse!4v1505731855948" style="border:0" allowfullscreen></iframe>
+            </section>
+
+            <section class="col-sm-6 col-lg-5">
+                <h3>Göteborg</h3>
+                <p><strong>Adress:</strong> Kommendörsgatan 12.</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2132.1315009593195!2d11.928352215612696!3d57.697235647828386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff3484d725e3d%3A0x3ef9b7861d5c5189!2sKommend%C3%B6rsgatan+12%2C+414+59+G%C3%B6teborg!5e0!3m2!1ssv!2sse!4v1505732073182" style="border:0" allowfullscreen></iframe>
+            </section>
+        </div>
+
+        <div class="row">
+           
+           <section class="hidden-xs col-sm-visible col-sm-6 col-lg-5 col-lg-offset-1">
+           <div class="fruit-decoration">
+                    <img src="Images/persikor.jpeg" alt="Persikor">
+                </div>
+			</section>
+           
+            <section class="col-sm-6 col-lg-5">
+                <h3>Malmö</h3>
+                <p><strong>Adress:</strong> Ystadsvägen 34.</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2255.1759836463843!2d13.01220091552109!3d55.58154451265529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653a16a5f91ddd3%3A0x59c2008e6724fef3!2sYstadv%C3%A4gen+34%2C+214+45+Malm%C3%B6!5e0!3m2!1ssv!2sse!4v1505732187627" style="border:0" allowfullscreen></iframe>
+            </section>
+        </div>
+
+        <div class="row">
+            <section class="kontakt">
+                <h3>Kontaktformulär</h3>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="namn" class="col-sm-2 control-label">Namn</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="namn" placeholder="Namn">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mailadress" class="col-sm-2 control-label">Mailadress</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="mailadress" placeholder="Mailadress">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="col-sm-2 control-label">Ämne</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="subject" placeholder="Ämne">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="meddelande" class="col-sm-2 control-label">Meddelande</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" id="meddelande" rows="3" placeholder="Meddelande"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-9">
+                            <button type="submit" class="btn btn-default">Skicka</button>
+                        </div>
+                    </div>
+                </form>
+
+
+            </section>
+        </div>
+    </main>
+    <footer role="contentinfo">
+        <p>Telefonnummer (växel): 08-000 XX XX</p>
+        <p>Öppettider: Mån-fre 10-20, lördagar 10-18, <br/>söndagar 11-17</p>
+        <p>exempel@elixirjuicebar.se</p>
+
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

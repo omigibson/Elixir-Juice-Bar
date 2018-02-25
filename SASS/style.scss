@@ -1,0 +1,256 @@
+//Variabler och mixins
+$paragraph-font: "Raleway Regular",
+sans-serif;
+$header-font: Vidaloka,
+serif;
+$maincolor-red: #cc0033;
+$maincolor-green: #19d300;
+$maincolor-yellow: #ffcc00;
+@mixin flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin space-around {
+    -webkit-box-pack: justify;
+    -moz-justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+}
+
+@mixin space-between {
+    -webkit-box-pack: justify;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+@mixin row-wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+//Styling för alla sidor
+p {
+    font-family: $paragraph-font;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $header-font;
+}
+
+h2 {
+    color: $maincolor-red;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+.logo {
+    padding-bottom: 20px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+ul {
+    @include flex;
+    @include space-around;
+    margin: 10px 0px;
+    
+    a {
+        font-family: $header-font;
+        font-size: 118%;
+        color: black;
+    }
+    a:hover {
+        color: $maincolor-yellow;
+    }
+    a:active {
+        color: $maincolor-red;
+    }
+    .current {
+        color: $maincolor-green;
+    }
+}
+
+main {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $maincolor-yellow;
+    margin: 0px auto;
+}
+
+section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+//Hem
+h1 {
+    animation-name: fade-in;
+    animation: fade-in 5s;
+    @keyframes fade-in {
+        0% {
+            color: $maincolor-yellow;
+        }
+        35% {
+            color: $maincolor-red;
+        }
+        70% {
+            color: $maincolor-green;
+        }
+        100% {
+            color: black;
+        }
+    }
+}
+
+.welcome {
+    margin-bottom: 15px;
+    border-bottom: 1px solid $maincolor-green;
+}
+
+.storbild {
+    border-radius: 15px;
+    margin-top: 20px;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+}
+
+//Våra juicer
+
+.juicefakta {
+	max-width: 500px;
+	margin: 0px auto;
+	border-bottom: 1px solid $maincolor-green;
+}
+
+.galleri-bild {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0px auto;
+    img {
+        width: 100%;
+    }
+}
+
+//Om oss
+.omoss-bild {
+    border-radius: 15px;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+}
+
+article.container {
+    width: 100%;
+}
+
+//Butiker
+.fruit-decoration {
+    display: inline-block;
+	max-width: 320px;
+	border-radius: 15px;
+    margin-top: 96px;
+	margin-right: 0px;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+}
+
+iframe {
+    width: 320px;
+    height: 220px;
+    border: 0;
+}
+
+.kontakt {
+    border-top: 1px solid $maincolor-green;
+}
+
+@media screen and (min-width: 768px) {
+    //Alla sidor
+    ul {
+        font-size: 120%;
+    }
+    footer {
+        @include flex;
+        @include space-between;
+        @include row-wrap;
+        padding: 0px 15px;
+    }
+    //Hem 
+    .welcome {
+        border: none;
+    }
+    .veckans-juice {
+        border-left: 1px solid $maincolor-green;
+    }
+    //Om oss
+    .omoss-text-wrap {
+        padding-right: 15px;
+        border-right: 1px solid $maincolor-green;
+    }
+    .omoss-bild {
+        max-width: 390px;
+        margin-top: 20px;
+    }
+    //Butiker
+    iframe {
+        width: 350px;
+        height: 280px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    //Alla sidor
+    ul.list-inline {
+        width: 900px;
+        margin-left: auto;
+        margin: 0px auto;
+        padding: 10px 0px;
+        @include space-around;
+    }
+    //Om oss
+    article.container {
+        padding: 0px;
+        width: 900px;
+        .omoss-text-wrap {
+            padding-left: 45px;
+            padding-right: 20px;
+        }
+        .omoss-bild-wrap {
+            max-width: 440px;
+            padding-left: 25px;
+            padding-right: 0px;
+        }
+    }
+    //Butiker
+    iframe {
+        width: 430px;
+        height: 300px;
+    }
+}
